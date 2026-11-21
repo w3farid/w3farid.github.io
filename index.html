@@ -1,500 +1,1007 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Materialize - Compiled and minified CSS-->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css">
-    <!-- Font Awesome Icon - CSS-->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <!-- Custom Styles-->
-    <link rel="stylesheet" href="static/css/style.css">
-    <title>Farid Ahmed | Software Developer</title>
-    <!-- Open Graph-->
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Farid Ahmed | Software Developer">
-    <meta property="og:description" content="I want to make things that make a difference.">
-    <meta property="og:url" content="https://w3farid.github.io/portfolio">
-    <meta property="og:site_name" content="Farid Ahmed | Software Developer">
-    <meta property="article:publisher" content="https://w3farid.github.io/portfolio">
-    <meta property="og:image" content="">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@w3farid">
-    <meta name="twitter:title" content="Farid Ahmed | Software Developer">
-    <meta name="twitter:description" content="I want to make things that make a difference.">
-    <meta name="twitter:url" content="https://w3farid.github.io/portfolio">
-    <meta name="author" content="Farid Ahmed">
-    <meta name="description" content="I want to make things that make a difference.">
-    <link rel="apple-touch-icon" sizes="57x57" href="static/img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="static/img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="static/img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="static/img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="static/img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="static/img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="static/img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="static/img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="static/img/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="static/img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="static/img/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="static/img/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <!--if lt IE 9script(src='//html5shim.googlecode.com/svn/trunk/html5.js')
-    -->
-    <meta name="robots" content="index, follow">
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-39096633-2', 'auto');
-      ga('send', 'pageview');
-    </script>
-    <meta name="google-site-verification" content="-3F1R8ekDXe8XFfCi7eIVfXOSWqlp_pWNQX2dfgKD4Y">
-  </head>
-  <body>
-    <!-- Navigation Menu-->
-    <nav ng-class="hide-on-small-only">
-      <ul class="side-nav fixed section table-of-contents">
-        <li class="logo"><a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro" class="brand-logo teal-text">
-            <h1>Farid Ahmed<span class="brown-text light">Software Developer</span></h1></a></li>
-        <li class="bold"><a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i class="mdi-social-person small"></i><span>About</span></a></li>
-        <li class="bold"><a aria-label="Navigate to the Experience section" href="#experience" class="waves-effect waves-dark cyan-text"><i class="mdi-action-trending-up small"></i><span>Experience</span></a></li>
-        <li class="bold"><a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark indigo-text"><i class="mdi-av-web small"></i><span>Projects</span></a></li>
-        <li class="bold"><a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark purple-text"><i class="mdi-av-equalizer small"></i><span>Skills</span></a></li>
-        <li class="bold"><a aria-label="Navigate to the Awards section" href="#awards" class="waves-effect waves-dark red-text"><i class="mdi-action-grade small"></i><span>Awards</span></a></li>
-        <li class="bold"><a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark orange-text"><i class="mdi-social-school small"></i><span>Education</span></a></li>
-        <li class="bold"><a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark brown-text"><i class="mdi-content-mail small"></i><span>Contact</span></a></li>
-        <li class="bold"><a aria-label="Open Andrew's resume in a new tab" href="https://docs.google.com/document/d/1bxnMXC7DyHTWIjHxbb-DK3QQPrSB-t9UXE3hugtqyy4/edit?usp=sharing" target="_blank" class="waves-effect waves-dark grey-text text-darken-3"><i class="mdi-action-description small"></i><span>Resume</span></a></li>
-      </ul>
-    </nav>
-    <nav class="hide-on-large only trigger z-depth-1"><a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-      <div class="name-title"><a id="name" aria-label="Navigate to the beginning of the page" href="#main" class="teal-text">Farid Ahmed</a><span class="brown-text light">Software Developer</span></div>
-    </nav>
-    <nav class="hide-on-large only">
-      <ul id="slide-out" class="side-nav">
-        <li class="bold"><a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i class="mdi-social-person small"></i><span>About</span></a></li>
-        <li class="bold"><a aria-label="Navigate to the Experience section" href="#experience" class="waves-effect waves-dark cyan-text"><i class="mdi-action-trending-up small"></i><span>Experience</span></a></li>
-        <li class="bold"><a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark indigo-text"><i class="mdi-av-web small"></i><span>Projects</span></a></li>
-        <li class="bold"><a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark purple-text"><i class="mdi-av-equalizer small"></i><span>Skills</span></a></li>
-        <li class="bold"><a aria-label="Navigate to the Awards section" href="#awards" class="waves-effect waves-dark red-text"><i class="mdi-action-grade small"></i><span>Awards</span></a></li>
-        <li class="bold"><a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark orange-text"><i class="mdi-social-school small"></i><span>Education</span></a></li>
-        <li class="bold"><a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark brown-text"><i class="mdi-content-mail small"></i><span>Contact</span></a></li>
-        <li class="bold"><a aria-label="Open Andrew's Resume in a new tab" href="https://docs.google.com/document/d/1bxnMXC7DyHTWIjHxbb-DK3QQPrSB-t9UXE3hugtqyy4/edit?usp=sharing" target="_blank" class="waves-effect waves-dark grey-text text-darken-3"><i class="mdi-action-description small"></i><span>Resume</span></a></li>
-      </ul>
-    </nav>
-    <!-- Main Content-->
-    <main>
-      <section id="intro" class="section scrollspy full-height">
-        <div class="overlay"></div>
-        <div class="container">
-          <h2>I want to <span class="teal">make things</span><br>that <span class="underline">make a difference</span>.</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md. Farid Ahmed — Enterprise IT Leadership, Systems Architecture &amp; Governance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1d3b66;
+      --navy-dark: #142a4a;
+      --navy-soft: #eef3f9;
+      --navy-tint: #f6f9fc;
+      --ink: #1a202c;
+      --ink-secondary: #374151;
+      --ink-muted: #5b6577;
+      --rule: #cbd5e1;
+      --rule-strong: #1d3b66;
+      --paper: #ffffff;
+      --canvas: #e9eef5;
+      --page-width: 210mm;
+      --page-pad-y: 15mm;
+      --page-pad-x: 17mm;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 9.6pt;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      background-color: var(--canvas);
+      line-height: 1.44;
+    }
+
+    /* Screen-only control bar */
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 24px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid #d8e0eb;
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.05);
+    }
+
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--ink-secondary);
+    }
+
+    .toolbar-title {
+      font-weight: 600;
+      color: var(--navy-dark);
+    }
+
+    .version-nav {
+      display: inline-flex;
+      background: #edf1f7;
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+
+    .version-link {
+      font-size: 11.5px;
+      font-weight: 500;
+      color: var(--ink-muted);
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 4px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .version-link:hover {
+      color: var(--navy-dark);
+    }
+
+    .version-link.active {
+      background: #ffffff;
+      color: var(--navy-dark);
+      font-weight: 600;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+    }
+
+    .toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .print-tip {
+      font-size: 11px;
+      color: var(--ink-muted);
+    }
+
+    .size-toggle {
+      display: inline-flex;
+      background: #edf1f7;
+      border-radius: 6px;
+      padding: 2px;
+    }
+
+    .size-btn {
+      border: none;
+      background: transparent;
+      color: var(--ink-muted);
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .size-btn.active {
+      background: #ffffff;
+      color: var(--navy-dark);
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+    }
+
+    .print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: none;
+      background: var(--navy);
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+
+    .print-btn:hover {
+      background: var(--navy-dark);
+    }
+
+    .print-btn:active {
+      transform: translateY(1px);
+    }
+
+    .print-btn svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+    }
+
+    /* Sheet container on screen */
+    .sheet-wrapper {
+      padding: 24px 16px 48px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .cv-sheet {
+      width: 100%;
+      max-width: var(--page-width);
+      background: var(--paper);
+      padding: var(--page-pad-y) var(--page-pad-x);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1), 0 1px 4px rgba(15, 23, 42, 0.06);
+      border-radius: 2px;
+    }
+
+    body.paper-letter {
+      --page-width: 215.9mm;
+    }
+
+    /* Header with top-left portrait */
+    .cv-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 13px;
+    }
+
+    .cv-photo-wrap {
+      flex-shrink: 0;
+      width: 74px;
+      height: 88px;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1.5px solid #d5dfec;
+      background: #f8fafc;
+      box-shadow: 0 2px 6px rgba(29, 59, 102, 0.08);
+    }
+
+    .cv-photo {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .cv-header-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .cv-name {
+      margin: 0 0 2px 0;
+      font-size: 20.5pt;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+    }
+
+    .cv-headline {
+      margin: 0 0 7px 0;
+      font-size: 10.4pt;
+      font-weight: 600;
+      color: var(--ink-secondary);
+      line-height: 1.3;
+    }
+
+    .cv-contact {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 4px 13px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 8.6pt;
+      color: var(--ink-muted);
+    }
+
+    .cv-contact li {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+
+    .cv-contact a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .cv-contact a:hover {
+      color: var(--navy);
+      text-decoration: underline;
+    }
+
+    .cv-contact svg {
+      width: 11.5px;
+      height: 11.5px;
+      color: var(--navy);
+      opacity: 0.78;
+      flex-shrink: 0;
+    }
+
+    /* Executive Highlights Strip */
+    .highlights-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+      margin: 12px 0 2px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .highlight-tile {
+      padding: 7px 9px;
+      background: var(--navy-tint);
+      border: 1px solid #dde6f2;
+      border-top: 2px solid var(--navy);
+      border-radius: 3px;
+    }
+
+    .highlight-value {
+      display: block;
+      font-size: 9.6pt;
+      font-weight: 700;
+      color: var(--navy-dark);
+      line-height: 1.25;
+    }
+
+    .highlight-label {
+      display: block;
+      margin-top: 1px;
+      font-size: 7.9pt;
+      color: var(--ink-muted);
+      line-height: 1.3;
+    }
+
+    /* Sections */
+    .cv-section {
+      margin-top: 13px;
+    }
+
+    .section-title {
+      margin: 0 0 7px 0;
+      padding-bottom: 3px;
+      font-size: 10.6pt;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.015em;
+      border-bottom: 1.5px solid var(--rule-strong);
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+
+    /* Summary */
+    .summary p {
+      margin: 0 0 5.5px 0;
+      font-size: 9.2pt;
+      color: var(--ink);
+      line-height: 1.48;
+    }
+
+    .summary p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Key Implementations */
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .project-card {
+      padding: 6.5px 10px;
+      border-left: 2.5px solid var(--navy);
+      background: var(--navy-tint);
+      border-radius: 0 3px 3px 0;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 2.5px;
+    }
+
+    .project-name {
+      margin: 0;
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 9.4pt;
+      font-weight: 700;
+      color: var(--navy-dark);
+    }
+
+    .portal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 8.1pt;
+      font-weight: 600;
+      color: var(--navy);
+      background: #e6eef8;
+      border: 1px solid #c7d7ec;
+      padding: 1px 6px;
+      border-radius: 3px;
+      text-decoration: none;
+      line-height: 1.3;
+    }
+
+    .portal-badge:hover {
+      background: #dae7f6;
+      text-decoration: underline;
+    }
+
+    .portal-badge svg {
+      width: 9.5px;
+      height: 9.5px;
+      flex-shrink: 0;
+    }
+
+    .project-org {
+      font-size: 8.2pt;
+      font-weight: 600;
+      color: var(--ink-muted);
+      white-space: nowrap;
+    }
+
+    .project-desc {
+      margin: 0;
+      font-size: 8.95pt;
+      color: var(--ink);
+      line-height: 1.44;
+    }
+
+    /* 2-column grid for Competencies & Technical Stack */
+    .competency-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 7px 16px;
+    }
+
+    .competency-box {
+      font-size: 8.95pt;
+      line-height: 1.44;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .lead-label {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* Standard bullet list */
+    .bullet-list {
+      margin: 0;
+      padding-left: 15px;
+      list-style-type: disc;
+    }
+
+    .bullet-list li {
+      margin-bottom: 3.5px;
+      padding-left: 2px;
+      font-size: 9.05pt;
+      color: var(--ink);
+      line-height: 1.44;
+    }
+
+    .bullet-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .bullet-list li::marker {
+      color: var(--navy);
+    }
+
+    /* Experience entries */
+    .experience-item {
+      margin-bottom: 10px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .experience-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .experience-header {
+      margin-bottom: 4px;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+
+    .role-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .role-title {
+      margin: 0;
+      font-size: 9.7pt;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.28;
+    }
+
+    .role-dates {
+      font-size: 8.7pt;
+      font-weight: 500;
+      color: var(--ink-muted);
+      white-space: nowrap;
+    }
+
+    .role-org {
+      margin: 1px 0 0 0;
+      font-size: 9pt;
+      font-style: italic;
+      color: var(--ink-muted);
+      line-height: 1.3;
+    }
+
+    /* Certifications & Education */
+    .credential-list {
+      margin: 0;
+      padding-left: 15px;
+      list-style-type: disc;
+    }
+
+    .credential-list li {
+      margin-bottom: 3.5px;
+      padding-left: 2px;
+      font-size: 9.05pt;
+      line-height: 1.44;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .credential-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .credential-list li::marker {
+      color: var(--navy);
+    }
+
+    /* Responsive adjustments for smaller screens */
+    @media screen and (max-width: 780px) {
+      .print-tip {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 720px) {
+      .toolbar {
+        padding: 10px 14px;
+        flex-wrap: wrap;
+      }
+
+      .size-toggle {
+        display: none;
+      }
+
+      .sheet-wrapper {
+        padding: 12px 8px 28px;
+      }
+
+      .cv-sheet {
+        padding: 20px 16px;
+      }
+
+      .cv-header {
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .cv-photo-wrap {
+        width: 64px;
+        height: 76px;
+      }
+
+      .cv-name {
+        font-size: 16.5pt;
+      }
+
+      .cv-contact {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+
+      .highlights-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .competency-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .role-row {
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
+
+    /* Print rules (margin boxes suppress browser default URL/date headers in modern Chrome/Edge) */
+    @page {
+      size: A4 portrait;
+      margin: 12mm 14mm;
+      @top-left { content: ""; }
+      @top-center { content: ""; }
+      @top-right { content: ""; }
+      @bottom-left { content: ""; }
+      @bottom-center { content: ""; }
+      @bottom-right { content: ""; }
+    }
+
+    @media print {
+      html {
+        font-size: 9.35pt;
+      }
+
+      body {
+        background: #ffffff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      .sheet-wrapper {
+        padding: 0 !important;
+        display: block;
+      }
+
+      .cv-sheet {
+        max-width: none !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+      }
+
+      .cv-header {
+        margin-bottom: 11px;
+      }
+
+      .cv-photo-wrap {
+        width: 70px;
+        height: 83px;
+        box-shadow: none;
+      }
+
+      .cv-section {
+        margin-top: 11px;
+      }
+
+      .experience-item {
+        margin-bottom: 9px;
+      }
+
+      .section-title {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .project-card,
+      .experience-item,
+      .highlights-strip {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .cv-contact a {
+        color: var(--ink-muted) !important;
+        text-decoration: none !important;
+      }
+
+      .portal-badge {
+        color: var(--navy) !important;
+        text-decoration: none !important;
+      }
+    }
+  </style>
+  <style id="dynamic-page-size"></style>
+</head>
+<body>
+  <!-- Screen-only toolbar -->
+  <header class="toolbar no-print" role="banner">
+    <div class="toolbar-left">
+      <span class="toolbar-title">Md. Farid Ahmed</span>
+      <nav class="version-nav" aria-label="CV versions">
+        <a href="index.html" class="version-link active">Enterprise IT Leadership</a>
+        <a href="cv-cisa-audit.html" class="version-link">IT Audit &amp; CISA</a>
+      </nav>
+    </div>
+    <div class="toolbar-actions">
+      <span class="print-tip">Tip: uncheck "Headers &amp; footers" in Print dialog</span>
+      <div class="size-toggle" role="group" aria-label="Paper size">
+        <button type="button" class="size-btn active" data-size="a4">A4</button>
+        <button type="button" class="size-btn" data-size="letter">Letter</button>
+      </div>
+      <button type="button" class="print-btn" id="printBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        Print / Save PDF
+      </button>
+    </div>
+  </header>
+
+  <main class="sheet-wrapper">
+    <article class="cv-sheet">
+      <!-- Document Header -->
+      <header class="cv-header">
+        <div class="cv-photo-wrap">
+          <img
+            src="static/img/farid_ahmed.jpg"
+            alt="Md. Farid Ahmed"
+            class="cv-photo"
+          />
+        </div>
+        <div class="cv-header-info">
+          <h1 class="cv-name">Md. Farid Ahmed</h1>
+          <p class="cv-headline">Enterprise IT Leadership, Systems Architecture &amp; Governance | CISA Passed</p>
+          <ul class="cv-contact" aria-label="Contact information">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Dhaka, Bangladesh</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <a href="tel:+8801724486878">+880 1724-486878</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <a href="mailto:w3farid@gmail.com">w3farid@gmail.com</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <a href="https://www.linkedin.com/in/w3farid" target="_blank" rel="noopener noreferrer">linkedin.com/in/w3farid</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- Executive Summary -->
+      <section class="cv-section summary" aria-labelledby="summary-heading">
+        <h2 class="section-title" id="summary-heading">Executive Summary</h2>
+        <p>
+          Enterprise IT leader and systems architect with 13+ years of experience driving digital transformation, mission-critical ERP and portal rollouts, and cybersecurity governance across national regulatory and commercial environments.
+        </p>
+        <p>
+          Combines hands-on enterprise software leadership at ICAB and CTrends with ISACA CISA (exam passed September 2026; pending experience verification) and an M.Sc. in Applied Statistics and Data Science—delivering scalable platforms engineered for security, regulatory compliance, and audit readiness.
+        </p>
+      </section>
+
+      <!-- Executive Highlights Strip -->
+      <section class="highlights-strip" aria-label="Career highlights">
+        <div class="highlight-tile">
+          <span class="highlight-value">13+ Years</span>
+          <span class="highlight-label">Enterprise IT &amp; Delivery</span>
+        </div>
+        <div class="highlight-tile">
+          <span class="highlight-value">5 Core Platforms</span>
+          <span class="highlight-label">IIS, Exam, ERP, LMS &amp; GRC</span>
+        </div>
+        <div class="highlight-tile">
+          <span class="highlight-value">CISA Passed</span>
+          <span class="highlight-label">ISACA Exam (Sept 2026)</span>
+        </div>
+        <div class="highlight-tile">
+          <span class="highlight-value">M.Sc. Data Science</span>
+          <span class="highlight-label">Jahangirnagar University</span>
         </div>
       </section>
-      <section id="about" class="section scrollspy">
-        <h3 class="page-title white-text teal">About</h3>
-        <div class="container flow-text">
-          <blockquote>
-            <h2>Searching for the opportunity to bring 2+ years experience with programming, Software Development position with <a href="http://ctrends-software.com/"> CTrends</a> incorporating critical thinking, problem solving, and leadership.</h2>
-          </blockquote>
-          <p>I'm a software developer, I write software for living. I work at <a href="http://ctrends-software.com/" class="btn-link"target="_blank" >Ctrends Software & Service Ltd.</a> as a Software Developer which is amazing.</p>
-          <p>Apart from that I do a lot of other things such as-
-              <ul>
-                <li><small>blogging at DZone, problem solving in <a href="https://www.hackerrank.com/w3farid" target="_blank"> Hacker Rank </a></small></li>
-                <li>Professional meetup: at <a href="https://jugbd.org">JUGBD</a>&nbsp;&amp; <a href="https://www.meetup.com/jug-bd/" target="_blank" rel="noopener">meetup</a></li>
-            </ul>
+
+      <!-- Key Enterprise Implementations -->
+      <section class="cv-section" aria-labelledby="projects-heading">
+        <h2 class="section-title" id="projects-heading">Key Enterprise Implementations</h2>
+        <div class="project-list">
+          <div class="project-card">
+            <div class="project-top">
+              <h3 class="project-name">
+                <span>ICAB Integrated Information System (IIS)</span>
+                <a href="https://iis.icab.org.bd" target="_blank" rel="noopener noreferrer" class="portal-badge">
+                  <span>iis.icab.org.bd</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </h3>
+              <span class="project-org">ICAB</span>
+            </div>
+            <p class="project-desc">
+              Led centralized platform implementation unifying student admission, member lifecycle, and CA firm registries—enforcing role-based access control (RBAC), master-data integrity, and institutional audit trails.
             </p>
-            <p>I mostly write code in Java, but I know Python and Php. I write code in JavaScript professionally when I work in front-end development. I have a few side projects running which are some what still in incubation, so when I make some good progress, I will share them here, hopefully, but chances are less.
+          </div>
 
-          I love to listen to music, watch movies and series, read books (I love history) and whenever I get some free time, I try to sleep.
+          <div class="project-card">
+            <div class="project-top">
+              <h3 class="project-name">End-to-End Examination Automation System</h3>
+              <span class="project-org">ICAB</span>
+            </div>
+            <p class="project-desc">
+              Directed full-lifecycle examination automation from online form fill-up, automated fee calculation, and multi-bank payment reconciliation through confidential result processing, with embedded validation controls and tamper-evident logging.
+            </p>
+          </div>
 
-          If you would like to get in touch with me, whether it be for tech support or to just to say hi, feel free to send me an email. My email address is: w3farid@gmail.com or find me on <a href="https://www.linkedin.com/in/w3farid/">LinkedIn</a></p>
-          <p><strong>Current Focus</strong>:&nbsp;<a aria-label="Navigate to the Inclusive Design Patterns homepage" href="">Accessibility</a>&nbsp;//&nbsp;<a aria-label="Navigate to the Full Stack React homepage" href="">React</a>&nbsp;//&nbsp;<a aria-label="Navigate to the article &quot;Scalable CSS&quot;" href="">Design Systems</a></p>
-        </div>
-      </section>
-      <section id="experience" class="section scrollspy">
-        <h3 class="page-title white-text teal">Experience</h3>
-        <div class="container">
-          <div class="card">
-            <div class="card-content">
-              <div class="row">
-                <div class="col s12 m2"><a href="http://wespire.com" target="_blank"><img alt="Ctrends Software & Service Ltd. logo" src="static/img/ctrends-logo-top.png" class="responsive-img center-block"></a></div>
-                <div class="col s12 m10">
-                  <p><span class="card-title"><a href="http://ctrends-software.com/" target="_blank" class="teal-text hoverline">Ctrends Software & Service Ltd.</a></span></p>
-                </div>
-              </div>
-              <div class="role brown-text">Programmer</div>
-              <p><em class="grey-text">Working as team leader to build ‘Financial Module’ to budgetary and quality requirements. Also involved in requirements gathering, demonstrating software prototypes, technical sales presentations, customer training. I have completed ‘SOD Module’ personally.</em></p>
-              <h6>Develop Product</h6>
-              <ul>
-                <li>Take part in software and architectural development activities.</li>
-                <li>Contributing in all phases of the development lifecycle</li>
-                <li>Designing, implementing, and maintaining Java applications that are high-volume and low-latency, required for mission-critical systems.</li>
-                <li>Writing well-designed, efficient, and testable code. </li>
-                <li>Tools: Java, J2EE,Spring Framework, Hibernate, PostgreSQL, JS, jQuery // Sass // HTML, JSX, Haml</li>
-              </ul>
-              <h6>Accomplishments</h6>
-              <ul>
-                <li>Dramatically increased speed of UI development using atomic, scalable CSS</li>
-                <li>Built tool to convert HRIS data into user accounts to simplify onboarding</li>
-                <li>Implemented inline @tagging feature to increase app share-ability</li>
-              </ul>
+          <div class="project-card">
+            <div class="project-top">
+              <h3 class="project-name">Enterprise ERP Implementation (Finance, HR &amp; Asset Management)</h3>
+              <span class="project-org">ICAB</span>
             </div>
-            <div class="card-action"><span>Dec 2016 - Present  |  Programmer, FIN</span></div>
+            <p class="project-desc">
+              Oversaw enterprise ERP rollout covering Finance, Human Resources, and Fixed Asset Management—embedding Segregation of Duties (SoD), multi-tier approval workflows, and financial reporting data integrity.
+            </p>
           </div>
-          <div class="card">
-            <div class="card-content">
-              <div class="row">
-                <div class="col s12 m2"><a href="http://agraniholdings.com/" target="_blank"><img alt="Agrani (Under British Tobacco) logo" src="static/img/agrani-logo.png" class="responsive-img center-block"></a></div>
-                <div class="col s12 m10">
-                  <p><span class="card-title"><a href="http://agraniholdings.com/" target="_blank" class="teal-text hoverline">Agrani (Under British Tobacco)</a></span></p>
-                </div>
-              </div>
-              <div class="role brown-text">IT Executive</div>
-              <p><em class="grey-text"></em></p>
-              <ul>
-                <li>Developed Android application and modify existing Android application code for better performance tuning. </li>
-                <li>To create offer </li>
-                <li>To write content in prism (cloud based application) and creating offer.</li>
-              </ul>
+
+          <div class="project-card">
+            <div class="project-top">
+              <h3 class="project-name">Moodle LMS &amp; AI-Assisted Class Management Automation</h3>
+              <span class="project-org">ICAB</span>
             </div>
-            <div class="card-action"><span>Jan 2014 - July 2015  |  IT Executive, Dev</span></div>
+            <p class="project-desc">
+              Implemented Moodle learning management platform integrated with AI-assisted class scheduling and academic operations automation, applying API governance, access controls, and data privacy safeguards.
+            </p>
           </div>
-          <div class="card">
-            <div class="card-content">
-              <div class="row">
-                <div class="col s12 m2"><a href="" target="_blank"><img alt="Startup Institute logo" src="static/img/si-logo.png" class="responsive-img center-block"></a></div>
-                <div class="col s12 m10">
-                  <p><span class="card-title"><a href="" target="_blank" class="teal-text hoverline">New Chips & bytes</a></span></p>
-                </div>
-              </div>
-              <div class="role brown-text">Instructor & Curriculum Designer</div>
-              <p><em class="grey-text">8-week course for students enrolled in the Fundamentals Classes Intro to Web Design</em></p>
-              <ul>
-                <li>Teaching the basics of HTML, CSS, and the principles of responsive design.</li>
-                <li>Currently redesigning and building a new, improved Web Design curriculum to be implemented across all SI channels in 2018</li>
-              </ul>
-              <h6>Accomplishments</h6>
-              <ul>
-                <li>Increased the average student retention rate from less than 40% to more than 95%</li>
-                <li>Doubled the average amount of students that move from Fundamentals Classes to the Full-Time program</li>
-              </ul>
+
+          <div class="project-card">
+            <div class="project-top">
+              <h3 class="project-name">Enterprise EBS Financial &amp; GRC / Segregation of Duties Suite</h3>
+              <span class="project-org">CTrends Software</span>
             </div>
-            <div class="card-action"><span>Jan 2013 - Des, 2014</span></div>
+            <p class="project-desc">
+              Architected and delivered enterprise Financial modules (GL, AP, AR, Treasury), Workflow/DOA, and a GRC Segregation of Duties engine detecting conflicting entitlements and producing automated RBAC audit reports.
+            </p>
           </div>
         </div>
       </section>
-      <section id="projects" class="section scrollspy">
-        <h3 class="page-title white-text teal">Projects</h3>
-        <div class="container">
-          <div class="row">
-            <!-- BlogSpire-->
-            <div class="col s12 m6 l4">
-              <div class="card medium">
-                <div class="card-image waves-effect waves-block waves-light"><img alt="Screenshot of BlogSpire web app" src="static/img/ctrends-ebs.png" class="activator"></div>
-                <div class="card-content"><span class="card-title activator teal-text hoverline">EBS<i class="mdi-navigation-more-vert right"></i></span>
-                  <p>EBS web app created for the Engineering team at Ctrends Software & Service Ltd..</p>
-                </div>
-                <div class="card-reveal"><span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span>
-                  <ul>
-                    <li><strong>Spring 4, AJAX, JDBC, Hibernate,, Jasper Report</strong> backend</li>
-                    <li><strong>Materialize CSS, JavaScript and JQuery</strong> frontend</li>
-                    <li>User <strong>authentication</strong> via Devise</li>
-                    <li>Implemented <strong>liking functionality</strong></li>
-                    <li><strong>Client-side rendering</strong> via AJAX</li>
-                  </ul>
-                  <div class="card-action"><a aria-label="Visit Code Island website" href="https://docs.google.com/presentation/d/10zvLcU9Xt5SxRM9zrnMU4bZQwiLwQmVZEhVjdbS0B-c/edit?usp=sharing" target="_blank" data-position="top" data-tooltip="View Online" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-external-link"></i></a><a aria-label="Visit the GitHub repo for Code Island project" href="javascript:void(0)" target="_blank" data-position="top" data-tooltip="View Source" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-github"></i></a></div>
-                </div>
-              </div>
-            </div>
-            <!-- Code Island-->
-            <div class="col s12 m6 l4">
-              <div class="card medium">
-                <div class="card-image waves-effect waves-block waves-light"><img alt="Code Island logo" src="static/img/business-solution-project.png" class="activator"></div>
-                <div class="card-content"><span class="card-title activator teal-text hoverline">Business Solutions<i class="mdi-navigation-more-vert right"></i></span>
-                  <p>Business Solutions is web application. I'm developed when I study at IDB-BISEW</p>
-                </div>
-                <div class="card-reveal"><span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span>
-                  <ul>
-                    <li><strong>Technologies</strong>Spring 4, JSF, Primefaces, AJAX, JDBC, Hibernate, UML, Jasper Report, CSS, JavaScript and JQuery.</li>
-                    <li><strong>Web Server</strong> Apache Tomcat 8.0.18</li> 
-                    <li><strong>IDB-BISEW</strong> NetBeans 8.1</li>
-                    <li><strong>Database</strong> MySQL</li>                     
-                  </ul>
-                  <div class="card-action"><a aria-label="Visit Code Island website" href="" target="_blank" data-position="top" data-tooltip="View Online" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-external-link"></i></a><a aria-label="Visit the GitHub repo for Code Island project" href="https://goo.gl/9KbByR" target="_blank" data-position="top" data-tooltip="View Source" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-github"></i></a></div>
-                </div>
-              </div>
-            </div>
-            <!-- Saved By the Text-->
-            <div class="col s12 m6 l4">
-              <div class="card medium">
-                <div class="card-image waves-effect waves-block waves-light"><img alt="Zach Morris from Saved by the Bell, on his clunky cell phone" src="static/img/No_Image_Available.jpg" class="activator"></div>
-                <div class="card-content"><span class="card-title activator teal-text hoverline">Business Express <i class="mdi-navigation-more-vert right"></i></span>
-                  <p>Business Express is web application. I'm developed when I study at IDB-BISEW</p>
-                </div>
-                <div class="card-reveal"><span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span>
-                 <ul>
-                    <li><strong>Technologies</strong>Spring 4, JSF, Primefaces, AJAX, JDBC, Hibernate, UML, Jasper Report, CSS, JavaScript and JQuery.</li>
-                    <li><strong>Web Server</strong> Apache Tomcat 8.0.18</li> 
-                    <li><strong>IDB-BISEW</strong> NetBeans 8.1</li>
-                    <li><strong>Database</strong> MySQL</li>                     
-                  </ul>
-                  <div class="card-action"><a aria-label="Visit Saved By The Test web app" href="" target="_blank" data-position="top" data-tooltip="View Online" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-external-link"></i></a><a aria-label="Visit the GitHub repo for Saved By the Text project" href="https://goo.gl/WVHDLv" target="_blank" data-position="top" data-tooltip="View Source" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-github"></i></a></div>
-                </div>
-              </div>
-            </div>
-            <!-- Skate Something-->
-            <div class="col s12 m6 l4">
-              <div class="card medium">
-                <div class="card-image waves-effect waves-block waves-light"><img alt="Skate boarder catching air on a half pipe" src="static/img/No_Image_Available.jpg" class="activator"></div>
-                <div class="card-content"><span class="card-title activator teal-text hoverline">North South University Management<i class="mdi-navigation-more-vert right"></i></span>
-                  <p>NSUM, Desktop application. It's university group project.</p>
-                </div>
-                <div class="card-reveal"><span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span>
-                  <ul>
-                    <li><strong>Technologies</strong>Java, J2SE (including Swing), Java I/O, Ireports</li>
-                    <li><strong>IDB-BISEW</strong> NetBeans 8.1</li>
-                    <li><strong>Database</strong> MySQL</li>                     
-                  </ul>
-                  <div class="card-action"><a aria-label="Visit Skate Something web app" href="" data-position="top" data-tooltip="View Online" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-external-link"></i></a><a aria-label="Visit the GitHub repo for Skate Something project" href="https://goo.gl/FFoUpK" data-position="top" data-tooltip="Source is Private" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-github"></i></a></div>
-                </div>
-              </div>
-            </div>
-            <!-- RI WiFi-->
-            <div class="col s12 m6 l4">
-              <div class="card medium">
-                <div class="card-image waves-effect waves-block waves-light"><img alt="RI WiFi logo" src="static/img/No_Image_Available.jpg" class="activator"></div>
-                <div class="card-content"><span class="card-title activator teal-text hoverline">RI Notepad <i class="mdi-navigation-more-vert right"></i></span>
-                  <p>Desktop java notpad</p>
-                </div>
-                <div class="card-reveal"><span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span>
-                  <ul>
-                    <li><strong>Technologies</strong>Java (Swing based)</li>
-                    <li><strong>IDB-BISEW</strong> NetBeans 8.1</li>                  
-                  </ul>
-                  <div class="card-action"><a aria-label="Visit RI WiFi web app" href="" target="_blank" data-position="top" data-tooltip="View Online" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-external-link"></i></a><a aria-label="Visit the GitHub repo for RI WiFi project" href="https://goo.gl/7qlHaj" target="_blank" data-position="top" data-tooltip="View Source" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-github"></i></a></div>
-                </div>
-              </div>
-            </div>
-            <!-- Pinterest-->
-            <div class="col s12 m6 l4">
-              <div class="card medium">
-                <div class="card-image waves-effect waves-block waves-light"><img alt="Cute kitten" src="static/img/No_Image_Available.jpg" class="activator"></div>
-                <div class="card-content"><span class="card-title activator teal-text hoverline">Sudia Real Estate<i class="mdi-navigation-more-vert right"></i></span>
-                  <p>Web application. Beautiful interfaces, Standard Design and user friendly</p>
-                </div>
-                <div class="card-reveal"><span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span>
-                 <ul>
-                    <li><strong>Technologies</strong>Java, ORM(Hibernate),Spring, JSF, Primefaces, Jasper Report, Bootstrap</li>
-                    <li><strong>IDB-BISEW</strong> NetBeans 8.1</li>                  
-                  </ul>
-                  <div class="card-action"><a aria-label="Visit Pinteresting web app" href="" target="_blank" data-position="top" data-tooltip="View Online" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-external-link"></i></a><a aria-label="Visit the GitHub repo for Pinteresting project" href="https://goo.gl/Y9JLcq" target="_blank" data-position="top" data-tooltip="View Source" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-github"></i></a></div>
-                </div>
-              </div>
-            </div>
+
+      <!-- Core Competencies -->
+      <section class="cv-section" aria-labelledby="competencies-heading">
+        <h2 class="section-title" id="competencies-heading">Core Competencies</h2>
+        <div class="competency-grid">
+          <div class="competency-box">
+            <span class="lead-label">Enterprise Systems &amp; Delivery:</span> Digital transformation, ERP (Finance, HR, Asset), portal architecture, LMS/Moodle, SDLC governance, vendor &amp; stakeholder management.
+          </div>
+          <div class="competency-box">
+            <span class="lead-label">IT Governance &amp; Controls (CISA):</span> ITGC, ITAC, Segregation of Duties (SoD), SOX-aligned change control (CAB), COBIT &amp; ISO 27001 alignment, audit readiness.
+          </div>
+          <div class="competency-box">
+            <span class="lead-label">Cybersecurity &amp; Resilience:</span> Vulnerability &amp; VAPT oversight, SSL/TLS lifecycle, Docker &amp; Nginx hardening, backup validation, RPO/RTO targets, BIA &amp; DR planning.
+          </div>
+          <div class="competency-box">
+            <span class="lead-label">Data Integrity &amp; Analytics:</span> Oracle, PostgreSQL &amp; MySQL assurance, ETL/migration audits, Python analytics, CAATs, statistical anomaly detection, AI-assisted automation.
           </div>
         </div>
       </section>
-      <section id="skills" class="section scrollspy">
-        <h3 class="page-title white-text teal">Skills</h3>
-        <div class="container">
-          <div class="card">
-            <div class="card-content">
-              <h4 class="brown-text light">HTML</h4>
-              <div class="row text-center">
-                <div class="col s4 m2"><img alt="" src="static/img/html5.png" class="responsive-img">HTML5</div>
-                <!-- <div class="col s4 m2"><img alt="" src="static/img/react.png" class="responsive-img">JSX</div>
-                <div class="col s4 m2"><img alt="" src="static/img/haml.png" class="responsive-img">Haml</div>
-                <div class="col s4 m2"><img alt="" src="static/img/jade.png" class="responsive-img">Jade</div>
-                <div class="col s4 m2"><img alt="" src="static/img/jekyll.png" class="responsive-img">Jekyll</div> -->
-              </div>
+
+      <!-- Professional Experience -->
+      <section class="cv-section" aria-labelledby="experience-heading">
+        <h2 class="section-title" id="experience-heading">Professional Experience</h2>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="role-row">
+              <h3 class="role-title">Senior Assistant Director, IT (Systems Governance and Architecture)</h3>
+              <span class="role-dates">2022 – Present</span>
             </div>
+            <p class="role-org">Institute of Chartered Accountants of Bangladesh (ICAB), Dhaka</p>
           </div>
-          <div class="card">
-            <div class="card-content">
-              <h4 class="brown-text light">CSS</h4>
-              <div class="row text-center">
-                <div class="col s4 m2"><img alt="" src="static/img/css3.png" class="responsive-img">CSS3</div>
-                <div class="col s4 m2"><img alt="" src="static/img/sass.png" class="responsive-img">SASS</div>
-                <div class="col s4 m2"><img alt="" src="static/img/bootstrap.png" class="responsive-img">Bootstrap</div>
-                <div class="col s4 m2"><img alt="" src="static/img/foundation.png" class="responsive-img">Foundation</div>
-                <div class="col s4 m2"><img alt="" src="static/img/materialize.png" class="responsive-img">Materialize</div>
-              </div>
+          <ul class="bullet-list">
+            <li>Direct enterprise IT strategy, application architecture, and cybersecurity posture aligned with the ICAB Reform Strategy 2025–2030.</li>
+            <li>Lead cross-functional delivery, vendor coordination, and pre-implementation control assurance across institutional digitalization programs—modernizing core academic, examination, and administrative workflows.</li>
+            <li>Enforce enterprise ITGC and release governance protocols: RBAC, periodic user access reviews, privileged access logging, structured CAB release control, and institutional audit liaison.</li>
+            <li>Supervise SSL/TLS lifecycles, scheduled penetration tests, container security scanning, and OS/database patching across cloud and production Oracle environments.</li>
+            <li>Validate backup restoration against RPO/RTO targets and execute business impact assessments supporting disaster recovery readiness across Smart Enroll, CA Connect, and ClearPath.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="role-row">
+              <h3 class="role-title">Senior Programmer and Technical Lead (ERP &amp; Enterprise Controls)</h3>
+              <span class="role-dates">December 2016 – 2022</span>
             </div>
+            <p class="role-org">CTrends Software &amp; Services Ltd.</p>
           </div>
-          <div class="card">
-            <div class="card-content">
-              <h4 class="brown-text light">Javascript</h4>
-              <div class="row text-center">
-                <div class="col s4 m2"><img alt="" src="static/img/react.png" class="responsive-img">React</div>
-                <div class="col s4 m2"><img alt="" src="static/img/javascript.png" class="responsive-img">Javascript</div>
-                <div class="col s4 m2"><img alt="" src="static/img/jquery.png" class="responsive-img">jQuery</div>
-                <div class="col s4 m2"><img alt="" src="static/img/angular.png" class="responsive-img">Angular</div>
-                <div class="col s4 m2"><img alt="" src="static/img/nodejs.png" class="responsive-img">Node</div>
-               <!--  <div class="col s4 m2"><img alt="" src="static/img/ionic.png" class="responsive-img">Ionic</div> -->
-              </div>
+          <ul class="bullet-list">
+            <li>Led technical teams delivering the enterprise EBS framework, Financial suite (GL, AP, AR, Treasury), Employee Database, Workflow/DOA, Web GIS, and Flutter mobile solutions.</li>
+            <li>Architected and deployed the GRC Segregation of Duties module detecting toxic combinations and conflicting entitlements, alongside tamper-evident database audit logs for external auditors.</li>
+            <li>Built automated API and Dart code generators to accelerate enterprise delivery and led OWASP-aligned secure SDLC code reviews and vulnerability remediation.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="role-row">
+              <h3 class="role-title">Technical Instructor and Enterprise Systems Mentor</h3>
+              <span class="role-dates">2019 – 2022</span>
             </div>
+            <p class="role-org">IDB-BISEW IT Scholarship Project</p>
           </div>
-          <div class="card">
-            <div class="card-content">
-              <h4 class="brown-text light">Back-End</h4>
-              <div class="row text-center">
-                <div class="col s4 m2"><img alt="" src="static/img/java-logo.png" class="responsive-img">Java</div>
-                <div class="col s4 m2"><img alt="" src="static/img/java-logo.png" class="responsive-img">J2EE</div>
-                <div class="col s4 m2"><img alt="" src="static/img/spring-logo.png" class="responsive-img">Spring Framework</div>
-                <div class="col s4 m2"><img alt="" src="static/img/hibernate-logo.png" class="responsive-img">Hibernate</div>
-                <div class="col s4 m2"><img alt="" src="static/img/postgresql.png" class="responsive-img">PostgreSQL</div>
-                <div class="col s4 m2"><img alt="" src="static/img/mongodb.png" class="responsive-img">MongoDB</div>
-                <div class="col s4 m2"><img alt="" src="static/img/mysql-logo.png" class="responsive-img">MySQL</div>
-                <div class="col s4 m2"><img alt="" src="static/img/oracle-logo-database.png" class="responsive-img">Oracle</div>
-              </div>
+          <ul class="bullet-list">
+            <li>Taught graduate engineering scholars enterprise architecture (J2EE/Spring), ACID transaction integrity, and secure software design.</li>
+            <li>Mentored cohorts on input validation, boundary checking, exception handling, and automated unit testing (JUnit, Mockito).</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="role-row">
+              <h3 class="role-title">IT Executive (Field Systems and Controls)</h3>
+              <span class="role-dates">January 2014 – July 2015</span>
             </div>
-          </div>         
+            <p class="role-org">British American Tobacco Bangladesh (BATB)</p>
           </div>
-           <div class="card">
-            <div class="card-content">
-              <h4 class="brown-text light">Build Tools</h4>
-              <div class="row text-center">
-                <div class="col s4 m2"><img alt="" src="static/img/maven-logo.png" class="responsive-img">Maven</div>
-                <div class="col s4 m2"><img alt="" src="static/img/gradle-logo.png" class="responsive-img">Grale</div>
-               <!--  <div class="col s4 m2"><img alt="" src="static/img/grunt.png" class="responsive-img">Grunt</div>
-                <div class="col s4 m2"><img alt="" src="static/img/bower.png" class="responsive-img">Bower</div> -->
-              </div>
-            </div>
+          <ul class="bullet-list">
+            <li>Maintained operational controls, Android field application enhancements, and secure data synchronization between nationwide handheld units and central cloud repositories.</li>
+            <li>Enforced mobile device data security policies and monitored synchronization logs for transmission exceptions.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Certifications and Training -->
+      <section class="cv-section" aria-labelledby="certifications-heading">
+        <h2 class="section-title" id="certifications-heading">Certifications and Training</h2>
+        <ul class="credential-list">
+          <li><span class="lead-label">Certified Information Systems Auditor (CISA)</span>, ISACA. Exam passed September 2026. Certification pending experience verification.</li>
+          <li><span class="lead-label">Google Advanced Data Analytics Professional Certificate</span>, Google / Coursera. In progress.</li>
+          <li><span class="lead-label">Foundations: Data, Data, Everywhere</span>, Google / Coursera. Completed August 2026.</li>
+          <li><span class="lead-label">Oracle Certified Professional, Java SE 6 Programmer (OCJP)</span>, Oracle University, 2016.</li>
+        </ul>
+      </section>
+
+      <!-- Education -->
+      <section class="cv-section" aria-labelledby="education-heading">
+        <h2 class="section-title" id="education-heading">Education</h2>
+        <ul class="credential-list">
+          <li><span class="lead-label">Master of Science (M.Sc.), Applied Statistics and Data Science</span>, Jahangirnagar University, Savar,&nbsp;Dhaka.&nbsp;2025.</li>
+          <li><span class="lead-label">Post-Graduate Diploma, Enterprise Systems Analysis and Design (J2EE)</span>, IDB-BISEW IT Scholarship Project, Dhaka.&nbsp;2017.</li>
+        </ul>
+      </section>
+
+      <!-- Technical Stack & Tools -->
+      <section class="cv-section" aria-labelledby="tools-heading">
+        <h2 class="section-title" id="tools-heading">Technical Stack &amp; Tools</h2>
+        <div class="competency-grid">
+          <div class="competency-box">
+            <span class="lead-label">Languages &amp; Frameworks:</span> Java (J2EE, Spring, Spring Boot, Hibernate), Python, SQL, JavaScript (React, Vue), Flutter/Dart.
           </div>
-          <div class="card">
-            <div class="card-content">
-              <h4 class="brown-text light">CMS</h4>
-              <div class="row text-center">
-                <div class="col s4 m2"><img alt="" src="static/img/magento-logo.png" class="responsive-img">Magento</div>
-               <!--  <div class="col s4 m2"><img alt="" src="static/img/tumblr.png" class="responsive-img">Tumblr</div>
-                <div class="col s4 m2"><img alt="" src="static/img/squarespace.png" class="responsive-img">Squarespace</div> -->
-              </div>
-            </div>
+          <div class="competency-box">
+            <span class="lead-label">Databases &amp; ERP:</span> Oracle 19c &amp; 11g, PostgreSQL, MySQL, Oracle E-Business Suite, Enterprise ERP (Finance, HR, Asset, GRC).
           </div>
-          <div class="card">
-            <div class="card-content">
-              <h4 class="brown-text light">Other</h4>
-              <div class="row text-center">
-                <div class="col s4 m2"><img alt="" src="static/img/github.png" class="responsive-img">Github</div>
-                <div class="col s4 m2"><img alt="" src="static/img/heroku.png" class="responsive-img">Heroku</div>
-                <div class="col s4 m2"><img alt="" src="static/img/photoshop.png" class="responsive-img">Photoshop</div>
-                <div class="col s4 m2"><img alt="" src="static/img/fcpx.png" class="responsive-img">Final Cut Pro</div>
-              </div>
-            </div>
+          <div class="competency-box">
+            <span class="lead-label">Platforms &amp; Infrastructure:</span> Moodle LMS, Docker, Nginx, Linux (Ubuntu/CentOS), virtualized cloud environments.
+          </div>
+          <div class="competency-box">
+            <span class="lead-label">Security &amp; Audit Tooling:</span> Penetration testing oversight, container scanning, SSL/TLS lifecycle, CAATs, anomaly detection, hash verification.
           </div>
         </div>
       </section>
-      <section id="awards" class="section scrollspy">
-        <h3 class="page-title white-text teal">Awards</h3>
-        <div class="container">
-          <div class="row">
-            <div class="col s12 m6">
-              <div class="card">
-                <div class="card-content">
-                  <p><span class="card-title"><a href="https://goo.gl/gdmKhk" target="_blank" class="teal-text hoverline">Best Performer</a></span></p>
-                  <p class="brown-text">Won Award as ‘Best Performer’, round-27, J2EE, IDB-BISEW : <a href="https://goo.gl/gdmKhk">https://goo.gl/gdmKhk</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6">
-              <div class="card">
-                <div class="card-content">
-                  <p><span class="card-title"><a href="https://goo.gl/4qDnNT" target="_blank" class="teal-text hoverline">First Winner</a></span></p>
-                  <p class="brown-text">Won Award as ‘First Winner’, National Mobile Application Awareness Development & Capacity Building Program : <a href="https://goo.gl/4qDnNT">https://goo.gl/4qDnNT</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="education" class="section scrollspy">
-        <h3 class="page-title white-text teal">Education</h3>
-        <div class="container">
-          <div class="row">
-            <div class="col s12 m6">
-              <div class="card">
-                <div class="card-content">
-                  <p><span class="card-title"><a href="http://upenn.edu" class="teal-text hoverline">Vendor Certification</a></span></p>
-                  <p class="brown-text">Oracle Certified Professional, Java SE 6 Programmer (OCJP) | Nov 2016</p>
-                  <p class="brown-text">Verify Link: <a href="https://goo.gl/T7haJY">https://goo.gl/T7haJY</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6">
-              <div class="card">
-                <div class="card-content">
-                  <p><span class="card-title"><a href="http://www.gwu.edu" class="teal-text hoverline">Diploma</a></span></p>
-                  <p class="brown-text">Enterprise System Analysis & Design-J2EE (ESAD-J2EE) | Duration of course: 1080 Hours</p>
-                  <address>Asia Pacific Communication Ltd. | Keari Plaza(4th floor), Plot # 83, Road # 8/A(Old 15), Satmosjid Road, Dhanmondi, Dhaka-1209 |  Under the Supervision of IDB-BISEW IT Scholarship Project. </address>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col s12 m6">
-              <div class="card">
-                <div class="card-content">
-                  <p><span class="card-title"><a href="http://upenn.edu" class="teal-text hoverline">Master’s Degree</a></span></p>
-                  <p class="brown-text">Masters Of Arts (M.A), From Dhaka College</p>
-                  <p class="brown-text">Passing Year: 2016</p>
-                </div>
-              </div>
-            </div>
-            <div class="col s12 m6">
-              <div class="card">
-                <div class="card-content">
-                  <p><span class="card-title"><a href="http://www.gwu.edu" class="teal-text hoverline">Bachelor's Degree</a></span></p>
-                  <p class="brown-text">Bachelor Of Arts (B.A), From Suhrawardi College</p>
-                  <p class="brown-text">Passing Year: 2015</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="contact" class="section scrollspy full-height">
-        <h3 class="page-title white-text teal">Contact</h3>
-        <div class="container">
-          <p><a aria-label="Email Andrew" href="mailto:w3farid@gmail.com" data-position="top" data-tooltip="Email Andrew" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-envelope"></i><a alt="" href="mailto:w3farid@gmail.com" class="hoverline">w3farid@gmail.com</a></a></p>
-          <p><a aria-label="View Andrew on GitHub" href="http://github.com/w3farid" target="_blank" data-position="top" data-tooltip="View Andrew on GitHub" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-github"></i><a alt="" href="http://github.com/w3farid" class="hoverline">github.com/w3farid</a></a></p>
-          <p><a aria-label="View Andrew on LinkedIn" href="http://linkedin.com/in/w3farid" target="_blank" data-position="top" data-tooltip="View Andrew on LinkedIn" class="btn-floating btn-large waves-effect waves-light brown tooltipped"><i class="fa fa-linkedin"></i><a alt="" href="http://linkedin.com/in/w3farid" class="hoverline">linkedin.com/in/w3farid</a></a></p>
-        </div>
-      </section>
-    </main>
-    <!-- jQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Materialize - Compiled and minified JavaScript-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
-    <script>
-      // Materialize - Initializers
-      $(document).ready(function(){
-        $('.scrollspy').scrollSpy();
-        // Initialize collapse button
-        $(".button-collapse").sideNav({
-            menuWidth: 190, // Default is 240
-            edge: 'left', // Choose the horizontal origin
-            closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-          }
-        );
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      var printBtn = document.getElementById("printBtn");
+      var sizeButtons = document.querySelectorAll(".size-btn");
+      var dynamicStyle = document.getElementById("dynamic-page-size");
+
+      printBtn.addEventListener("click", function () {
+        window.print();
       });
-    </script>
-    <!-- nothing to see here...--><small>
-           ___                       ___           ___                    ___                                     ___
-          /\  \                     /\__\         /\  \                  /\__\                      ___          /\__\
-          \:\  \       ___         /:/ _/_        \:\  \                /:/ _/_       ___          /\  \        /:/ _/_
-           \:\  \     /\__\       /:/ /\  \        \:\  \              /:/ /\__\     /\__\         \:\  \      /:/ /\__\
-       ___ /::\  \   /:/__/      /:/ /::\  \   ___ /::\  \            /:/ /:/  /    /:/__/          \:\  \    /:/ /:/ _/_
-      /\  /:/\:\__\ /::\  \     /:/__\/\:\__\ /\  /:/\:\__\          /:/_/:/  /    /::\  \      ___  \:\__\  /:/_/:/ /\__\
-      \:\/:/  \/__/ \/\:\  \__  \:\  \ /:/  / \:\/:/  \/__/          \:\/:/  /     \/\:\  \__  /\  \ |:|  |  \:\/:/ /:/  /
-       \::/__/       ~~\:\/\__\  \:\  /:/  /   \::/__/                \::/__/       ~~\:\/\__\ \:\  \|:|  |   \::/_/:/  /
-        \:\  \          \::/  /   \:\/:/  /     \:\  \                 \:\  \          \::/  /  \:\__|:|__|    \:\/:/  /
-         \:\__\         /:/  /     \::/  /       \:\__\                 \:\__\         /:/  /    \::::/__/      \::/  /
-          \/__/         \/__/       \/__/         \/__/                  \/__/         \/__/      ~~~~           \/__/</small>
-  </body>
+
+      var marginReset =
+        ' @top-left { content: ""; } @top-center { content: ""; } @top-right { content: ""; }' +
+        ' @bottom-left { content: ""; } @bottom-center { content: ""; } @bottom-right { content: ""; }';
+
+      sizeButtons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var size = btn.getAttribute("data-size");
+          sizeButtons.forEach(function (b) {
+            b.classList.toggle("active", b === btn);
+          });
+
+          if (size === "letter") {
+            document.body.classList.add("paper-letter");
+            dynamicStyle.textContent = "@page { size: letter portrait; margin: 12mm 14mm;" + marginReset + " }";
+          } else {
+            document.body.classList.remove("paper-letter");
+            dynamicStyle.textContent = "@page { size: A4 portrait; margin: 12mm 14mm;" + marginReset + " }";
+          }
+        });
+      });
+    })();
+  </script>
+</body>
 </html>

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md. Farid Ahmed — Senior IT Audit and Governance Professional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1d3b66;
+      --navy-dark: #142a4a;
+      --navy-soft: #eef3f9;
+      --ink: #1a202c;
+      --ink-secondary: #374151;
+      --ink-muted: #5b6577;
+      --rule: #cbd5e1;
+      --rule-strong: #1d3b66;
+      --paper: #ffffff;
+      --canvas: #e9eef5;
+      --page-width: 210mm;
+      --page-pad-y: 16mm;
+      --page-pad-x: 18mm;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 10pt;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      background-color: var(--canvas);
+      line-height: 1.48;
+    }
+
+    /* Screen-only control bar */
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 24px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid #d8e0eb;
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.05);
+    }
+
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--ink-secondary);
+    }
+
+    .toolbar-title {
+      font-weight: 600;
+      color: var(--navy-dark);
+    }
+
+    .version-nav {
+      display: inline-flex;
+      background: #edf1f7;
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+
+    .version-link {
+      font-size: 11.5px;
+      font-weight: 500;
+      color: var(--ink-muted);
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 4px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .version-link:hover {
+      color: var(--navy-dark);
+    }
+
+    .version-link.active {
+      background: #ffffff;
+      color: var(--navy-dark);
+      font-weight: 600;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+    }
+
+    .toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .size-toggle {
+      display: inline-flex;
+      background: #edf1f7;
+      border-radius: 6px;
+      padding: 2px;
+    }
+
+    .size-btn {
+      border: none;
+      background: transparent;
+      color: var(--ink-muted);
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .size-btn.active {
+      background: #ffffff;
+      color: var(--navy-dark);
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+    }
+
+    .print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: none;
+      background: var(--navy);
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+
+    .print-btn:hover {
+      background: var(--navy-dark);
+    }
+
+    .print-btn:active {
+      transform: translateY(1px);
+    }
+
+    .print-btn svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+    }
+
+    /* Sheet container on screen */
+    .sheet-wrapper {
+      padding: 28px 16px 48px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .cv-sheet {
+      width: 100%;
+      max-width: var(--page-width);
+      background: var(--paper);
+      padding: var(--page-pad-y) var(--page-pad-x);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1), 0 1px 4px rgba(15, 23, 42, 0.06);
+      border-radius: 2px;
+    }
+
+    body.paper-letter {
+      --page-width: 215.9mm;
+    }
+
+    /* Header with top-left portrait */
+    .cv-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .cv-photo-wrap {
+      flex-shrink: 0;
+      width: 78px;
+      height: 92px;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1.5px solid #d5dfec;
+      background: #f8fafc;
+      box-shadow: 0 2px 6px rgba(29, 59, 102, 0.08);
+    }
+
+    .cv-photo {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .cv-header-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .cv-name {
+      margin: 0 0 3px 0;
+      font-size: 21pt;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+    }
+
+    .cv-headline {
+      margin: 0 0 8px 0;
+      font-size: 11pt;
+      font-weight: 500;
+      color: var(--ink-secondary);
+      line-height: 1.35;
+    }
+
+    .cv-contact {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 4px 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 8.7pt;
+      color: var(--ink-muted);
+    }
+
+    .cv-contact li {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+
+    .cv-contact a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .cv-contact a:hover {
+      color: var(--navy);
+      text-decoration: underline;
+    }
+
+    .cv-contact svg {
+      width: 12px;
+      height: 12px;
+      color: var(--navy);
+      opacity: 0.75;
+      flex-shrink: 0;
+    }
+
+    /* Sections */
+    .cv-section {
+      margin-top: 15px;
+    }
+
+    .section-title {
+      margin: 0 0 8px 0;
+      padding-bottom: 4px;
+      font-size: 11.2pt;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.01em;
+      border-bottom: 1.5px solid var(--rule-strong);
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+
+    /* Summary */
+    .summary p {
+      margin: 0 0 7px 0;
+      font-size: 9.6pt;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+
+    .summary p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Standard bullet list */
+    .bullet-list {
+      margin: 0;
+      padding-left: 16px;
+      list-style-type: disc;
+    }
+
+    .bullet-list li {
+      margin-bottom: 4.5px;
+      padding-left: 2px;
+      font-size: 9.5pt;
+      color: var(--ink);
+      line-height: 1.46;
+    }
+
+    .bullet-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .bullet-list li::marker {
+      color: var(--navy);
+    }
+
+    .lead-label {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* Experience entries */
+    .experience-item {
+      margin-bottom: 13px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .experience-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .experience-header {
+      margin-bottom: 5px;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+
+    .role-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .role-title {
+      margin: 0;
+      font-size: 10.1pt;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+
+    .role-dates {
+      font-size: 9pt;
+      font-weight: 500;
+      color: var(--ink-muted);
+      white-space: nowrap;
+    }
+
+    .role-org {
+      margin: 1px 0 0 0;
+      font-size: 9.4pt;
+      font-style: italic;
+      color: var(--ink-muted);
+      line-height: 1.35;
+    }
+
+    /* Certifications & Education */
+    .credential-list {
+      margin: 0;
+      padding-left: 16px;
+      list-style-type: disc;
+    }
+
+    .credential-list li {
+      margin-bottom: 5px;
+      padding-left: 2px;
+      font-size: 9.5pt;
+      line-height: 1.46;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .credential-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .credential-list li::marker {
+      color: var(--navy);
+    }
+
+    /* Technical Tools */
+    .tools-list {
+      margin: 0;
+      padding-left: 16px;
+      list-style-type: disc;
+    }
+
+    .tools-list li {
+      margin-bottom: 4.5px;
+      padding-left: 2px;
+      font-size: 9.5pt;
+      line-height: 1.46;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .tools-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .tools-list li::marker {
+      color: var(--navy);
+    }
+
+    /* Responsive adjustments for smaller screens */
+    @media screen and (max-width: 720px) {
+      .toolbar {
+        padding: 10px 14px;
+      }
+
+      .toolbar-badge,
+      .size-toggle {
+        display: none;
+      }
+
+      .sheet-wrapper {
+        padding: 12px 8px 28px;
+      }
+
+      .cv-sheet {
+        padding: 20px 18px;
+      }
+
+      .cv-header {
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .cv-photo-wrap {
+        width: 68px;
+        height: 80px;
+      }
+
+      .cv-name {
+        font-size: 17pt;
+      }
+
+      .cv-contact {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+
+      .role-row {
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
+
+    /* Print rules */
+    @page {
+      size: A4 portrait;
+      margin: 13mm 15mm;
+      @top-left { content: ""; }
+      @top-center { content: ""; }
+      @top-right { content: ""; }
+      @bottom-left { content: ""; }
+      @bottom-center { content: ""; }
+      @bottom-right { content: ""; }
+    }
+
+    @media print {
+      html {
+        font-size: 9.8pt;
+      }
+
+      body {
+        background: #ffffff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      .sheet-wrapper {
+        padding: 0 !important;
+        display: block;
+      }
+
+      .cv-sheet {
+        max-width: none !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+      }
+
+      .cv-header {
+        margin-bottom: 14px;
+      }
+
+      .cv-photo-wrap {
+        width: 74px;
+        height: 88px;
+        box-shadow: none;
+      }
+
+      .cv-section {
+        margin-top: 13px;
+      }
+
+      .section-title {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+
+      .experience-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .cv-contact a {
+        color: var(--ink-muted) !important;
+        text-decoration: none !important;
+      }
+    }
+  </style>
+  <style id="dynamic-page-size"></style>
+</head>
+<body>
+  <!-- Screen-only toolbar -->
+  <header class="toolbar no-print" role="banner">
+    <div class="toolbar-left">
+      <span class="toolbar-title">Md. Farid Ahmed</span>
+      <nav class="version-nav" aria-label="CV versions">
+        <a href="index.html" class="version-link">Enterprise IT Leadership</a>
+        <a href="cv-cisa-audit.html" class="version-link active">IT Audit &amp; CISA</a>
+      </nav>
+    </div>
+    <div class="toolbar-actions">
+      <div class="size-toggle" role="group" aria-label="Paper size">
+        <button type="button" class="size-btn active" data-size="a4">A4</button>
+        <button type="button" class="size-btn" data-size="letter">Letter</button>
+      </div>
+      <button type="button" class="print-btn" id="printBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        Print / Save PDF
+      </button>
+    </div>
+  </header>
+
+  <main class="sheet-wrapper">
+    <article class="cv-sheet">
+      <!-- Document Header -->
+      <header class="cv-header">
+        <div class="cv-photo-wrap">
+          <img
+            src="static/img/farid_ahmed.jpg"
+            alt="Md. Farid Ahmed"
+            class="cv-photo"
+          />
+        </div>
+        <div class="cv-header-info">
+          <h1 class="cv-name">Md. Farid Ahmed</h1>
+          <p class="cv-headline">Senior IT Audit and Governance Professional, CISA Passed</p>
+          <ul class="cv-contact" aria-label="Contact information">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Dhaka, Bangladesh</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <a href="tel:+8801724486878">+880 1724-486878</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <a href="mailto:w3farid@gmail.com">w3farid@gmail.com</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <a href="https://www.linkedin.com/in/w3farid" target="_blank" rel="noopener noreferrer">linkedin.com/in/w3farid</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- Professional Summary -->
+      <section class="cv-section summary" aria-labelledby="summary-heading">
+        <h2 class="section-title" id="summary-heading">Professional Summary</h2>
+        <p>
+          Senior IT governance and audit professional with 13+ years in enterprise IT. Specializes in IT general controls (ITGC), IT application controls (ITAC), segregation of duties (SoD) and information security assurance.
+        </p>
+        <p>
+          Leads systems governance, application risk assurance and cybersecurity controls at the Institute of Chartered Accountants of Bangladesh (ICAB). Delivers SOX-aligned change control and audit readiness across examination and ERP systems.
+        </p>
+        <p>
+          Passed the ISACA CISA examination in September 2026. Certification pending experience verification.
+        </p>
+      </section>
+
+      <!-- Core Competencies -->
+      <section class="cv-section" aria-labelledby="competencies-heading">
+        <h2 class="section-title" id="competencies-heading">Core Competencies</h2>
+        <ul class="bullet-list">
+          <li><span class="lead-label">IT general controls:</span> logical access, user access reviews, privileged access management, change management (CAB), production release controls, backup and disaster recovery.</li>
+          <li><span class="lead-label">IT application controls:</span> automated business controls, input validation, automated three-way reconciliation, SoD matrices, audit logging and tamper evidence.</li>
+          <li><span class="lead-label">Information security and governance:</span> vulnerability management, SSL/TLS lifecycle, incident response readiness, network segmentation, COBIT and ISO 27001-aligned controls, ISACA standards.</li>
+          <li><span class="lead-label">Data integrity:</span> Oracle, PostgreSQL and MySQL assurance, checksum and hash verification, ETL and migration data integrity audits.</li>
+          <li><span class="lead-label">Audit analytics:</span> computer-assisted audit techniques (CAATs), Python risk analytics, statistical anomaly detection, transaction log forensics.</li>
+          <li><span class="lead-label">Architecture and SDLC:</span> microservices security, secure SDLC review, Docker environment auditing, Nginx hardening, API governance and interface controls.</li>
+        </ul>
+      </section>
+
+      <!-- Professional Experience -->
+      <section class="cv-section" aria-labelledby="experience-heading">
+        <h2 class="section-title" id="experience-heading">Professional Experience</h2>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="role-row">
+              <h3 class="role-title">Senior Assistant Director, IT (Systems Governance and Architecture)</h3>
+              <span class="role-dates">2022 – Present</span>
+            </div>
+            <p class="role-org">Institute of Chartered Accountants of Bangladesh (ICAB), Dhaka</p>
+          </div>
+          <ul class="bullet-list">
+            <li>Direct IT risk management, application architecture and cybersecurity posture, aligned with the ICAB Reform Strategy 2025–2030.</li>
+            <li>Serve as primary liaison for institutional audit preparedness and technical risk oversight.</li>
+            <li>Designed and evaluated automated controls across exam registration, fee calculation, multi-bank payment reconciliation and confidential result processing.</li>
+            <li>Enforced ITGC protocols: role-based access control, periodic user access reviews, privileged access logging and structured release management.</li>
+            <li>Supervised SSL/TLS lifecycles, scheduled penetration tests, container security scanning and OS/database patching across cloud and production Oracle environments.</li>
+            <li>Validated backup restoration against RPO/RTO targets and ran business impact assessments, supporting disaster recovery readiness across Smart Enroll, CA Connect and ClearPath.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="role-row">
+              <h3 class="role-title">Senior Programmer and Technical Lead (ERP Controls)</h3>
+              <span class="role-dates">December 2016 – 2022</span>
+            </div>
+            <p class="role-org">CTrends Software &amp; Services Ltd.</p>
+          </div>
+          <ul class="bullet-list">
+            <li>Architected and deployed a Segregation of Duties module for the enterprise EBS framework, detecting toxic combinations and conflicting entitlements across GL, AP, AR and Treasury.</li>
+            <li>Engineered tamper-evident database audit logs capturing field-level changes, critical authorization overrides and access anomalies for external auditors.</li>
+            <li>Led secure SDLC code reviews and vulnerability remediation, aligned with OWASP standards and financial data integrity requirements.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="role-row">
+              <h3 class="role-title">Technical Instructor and Enterprise Systems Mentor</h3>
+              <span class="role-dates">2019 – 2022</span>
+            </div>
+            <p class="role-org">IDB-BISEW IT Scholarship Project</p>
+          </div>
+          <ul class="bullet-list">
+            <li>Taught graduate engineering scholars enterprise architecture (J2EE), ACID transaction integrity and secure software design.</li>
+            <li>Mentored cohorts on input validation, boundary checking, exception handling and automated unit testing.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="role-row">
+              <h3 class="role-title">IT Executive (Field Systems and Controls)</h3>
+              <span class="role-dates">January 2014 – July 2015</span>
+            </div>
+            <p class="role-org">British American Tobacco Bangladesh (BATB)</p>
+          </div>
+          <ul class="bullet-list">
+            <li>Maintained operational controls and secure data synchronization for nationwide field marketing applications, between handheld units and central cloud repositories.</li>
+            <li>Enforced mobile device data security policies and monitored synchronization logs for transmission exceptions.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Certifications and Training -->
+      <section class="cv-section" aria-labelledby="certifications-heading">
+        <h2 class="section-title" id="certifications-heading">Certifications and Training</h2>
+        <ul class="credential-list">
+          <li><span class="lead-label">Certified Information Systems Auditor (CISA)</span>, ISACA. Exam passed September 2026. Certification pending experience verification.</li>
+          <li><span class="lead-label">Google Advanced Data Analytics Professional Certificate</span>, Google / Coursera. In progress.</li>
+          <li><span class="lead-label">Foundations: Data, Data, Everywhere</span>, Google / Coursera. Completed August 2026.</li>
+          <li><span class="lead-label">Oracle Certified Professional, Java SE 6 Programmer</span>, Oracle University, 2016.</li>
+        </ul>
+      </section>
+
+      <!-- Education -->
+      <section class="cv-section" aria-labelledby="education-heading">
+        <h2 class="section-title" id="education-heading">Education</h2>
+        <ul class="credential-list">
+          <li><span class="lead-label">Master of Science (M.Sc.), Applied Statistics and Data Science</span>, Jahangirnagar University, Savar,&nbsp;Dhaka.&nbsp;2025.</li>
+          <li><span class="lead-label">Post-Graduate Diploma, Enterprise Systems Analysis and Design (J2EE)</span>, IDB-BISEW IT Scholarship Project, Dhaka.&nbsp;2017.</li>
+        </ul>
+      </section>
+
+      <!-- Technical Tools -->
+      <section class="cv-section" aria-labelledby="tools-heading">
+        <h2 class="section-title" id="tools-heading">Technical Tools</h2>
+        <ul class="tools-list">
+          <li><span class="lead-label">Databases:</span> Oracle 19c and 11g, PostgreSQL, MySQL.</li>
+          <li><span class="lead-label">Programming and analytics:</span> Python, Java (J2EE), SQL, statistical anomaly detection, CAATs.</li>
+          <li><span class="lead-label">Platforms and infrastructure:</span> Oracle E-Business Suite, Docker, Nginx, virtualized cloud environments.</li>
+          <li><span class="lead-label">Security tooling:</span> penetration testing, container security scanning, SSL/TLS certificate management, checksum and hash verification.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      var printBtn = document.getElementById("printBtn");
+      var sizeButtons = document.querySelectorAll(".size-btn");
+      var dynamicStyle = document.getElementById("dynamic-page-size");
+
+      printBtn.addEventListener("click", function () {
+        window.print();
+      });
+
+      sizeButtons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var size = btn.getAttribute("data-size");
+          sizeButtons.forEach(function (b) {
+            b.classList.toggle("active", b === btn);
+          });
+
+          if (size === "letter") {
+            document.body.classList.add("paper-letter");
+            dynamicStyle.textContent = "@page { size: letter portrait; margin: 13mm 15mm; }";
+          } else {
+            document.body.classList.remove("paper-letter");
+            dynamicStyle.textContent = "@page { size: A4 portrait; margin: 13mm 15mm; }";
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
