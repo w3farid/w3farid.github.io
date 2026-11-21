@@ -26,30 +26,33 @@
   <meta property="og:title" content="Md. Farid Ahmed | Enterprise IT Leadership, Systems Architecture &amp; Governance (CISA Passed)" />
   <meta property="og:description" content="13+ years leading Enterprise ERP, Examination Automation, Centralized Portals (iis.icab.org.bd), IT Governance, and Cybersecurity at ICAB. ISACA CISA Exam Passed &amp; M.Sc. in Applied Statistics and Data Science." />
   <meta property="og:url" content="https://w3farid.github.io/" />
-  <meta property="og:image" content="https://w3farid.github.io/static/img/Farid_Ahmed_944x1121.jpg" />
-  <meta property="og:image:alt" content="Portrait of Md. Farid Ahmed" />
-  <meta property="og:image:width" content="944" />
-  <meta property="og:image:height" content="1121" />
+  <meta property="og:image" content="https://w3farid.github.io/static/img/og-banner.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:alt" content="Md. Farid Ahmed — Enterprise IT Leader, Systems Architect &amp; CISA Passed" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_US" />
   <meta property="profile:first_name" content="Md. Farid" />
   <meta property="profile:last_name" content="Ahmed" />
 
   <!-- Twitter / X Card -->
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Md. Farid Ahmed | Enterprise IT Leader, Systems Architect &amp; CISA" />
   <meta name="twitter:description" content="Senior Assistant Director (IT) at ICAB &amp; CISA Passed. 13+ years in Enterprise ERP, Examination Automation, IT Governance, and Cybersecurity." />
-  <meta name="twitter:image" content="https://w3farid.github.io/static/img/Farid_Ahmed_944x1121.jpg" />
-  <meta name="twitter:image:alt" content="Portrait of Md. Farid Ahmed" />
+  <meta name="twitter:image" content="https://w3farid.github.io/static/img/og-banner.jpg" />
+  <meta name="twitter:image:alt" content="Md. Farid Ahmed — Enterprise IT Leader, Systems Architect &amp; CISA Passed" />
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    "dateModified": "2026-11-21",
+    "dateCreated": "2026-11-21T00:00:00+06:00",
+    "dateModified": "2026-11-21T18:30:00+06:00",
     "url": "https://w3farid.github.io/",
     "mainEntity": {
       "@type": "Person",
+      "identifier": "w3farid",
       "name": "Md. Farid Ahmed",
       "alternateName": "Farid Ahmed",
       "jobTitle": "Senior Assistant Director, IT (Systems Governance and Architecture)",
@@ -268,6 +271,34 @@
       background: #ffffff;
       color: var(--navy-dark);
       box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1.5px solid var(--navy);
+      background: #ffffff;
+      color: var(--navy);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 13px;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .download-btn:hover {
+      background: var(--navy-soft);
+      color: var(--navy-dark);
+    }
+
+    .download-btn svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
     }
 
     .print-btn {
@@ -819,6 +850,14 @@
         <button type="button" class="size-btn active" data-size="a4">A4</button>
         <button type="button" class="size-btn" data-size="letter">Letter</button>
       </div>
+      <a href="Md_Farid_Ahmed_CV.pdf" download="Md_Farid_Ahmed_CV.pdf" class="download-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download PDF
+      </a>
       <button type="button" class="print-btn" id="printBtn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <polyline points="6 9 6 2 18 2 18 9"></polyline>
